@@ -45,51 +45,6 @@ uv sync
 
 L'exécutable sera dans `dist\discord-monitor.exe`. Le build `-NoConsole` évite toute fenêtre au démarrage.
 
----
-
-## Distribution à vos amis
-
-### Ce que vous partagez
-
-Un seul fichier : **`discord-monitor.exe`** (construit avec `.\build.ps1 -NoConsole`).
-
-Partagez-le par lien de téléchargement (Drive, Dropbox, GitHub Releases, etc.). Aucune installation ni Python requis.
-
-### Prérequis pour vos amis
-
-- **Windows** (10 ou 11)
-- **Discord** installé (version classique)
-- **Vencord** déjà installé sur Discord (le programme répare Vencord s’il est cassé, mais ne fait pas l’installation initiale)
-
-### Utilisation pour vos amis
-
-#### Première utilisation
-
-1. Placer `discord-monitor.exe` où ils veulent (bureau, dossier, etc.)
-2. Double-cliquer ou lancer en ligne de commande :
-   ```
-   discord-monitor.exe --startup
-   ```
-   → Vérifie Vencord, répare si cassé, lance Discord.
-
-#### Lancer au démarrage Windows
-
-1. Ouvrir une invite de commande ou PowerShell dans le dossier de l’exe
-2. Exécuter :
-   ```
-   discord-monitor.exe --install-startup
-   ```
-3. Au prochain démarrage, Discord sera lancé automatiquement après vérification de Vencord.
-
-#### Commandes utiles
-
-| Commande | Usage |
-|----------|--------|
-| `discord-monitor.exe` | Voir le statut Discord et Vencord |
-| `discord-monitor.exe --startup` | Lancer Discord (avec vérification) |
-| `discord-monitor.exe --repair` | Réparer Vencord si cassé |
-| `discord-monitor.exe --uninstall-startup` | Désactiver le lancement au démarrage |
-
 ### Si Vencord n’est pas encore installé
 
 Le script ne peut pas faire la première installation de Vencord. Vos amis doivent :
