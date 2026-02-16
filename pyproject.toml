@@ -1,0 +1,19 @@
+[project]
+name = "discord-monitor"
+version = "0.1.0"
+description = "Surveille Discord et Vencord, répare automatiquement, lance Discord au démarrage."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "click>=8.1.0",
+    "psutil>=5.9.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+build = [
+    "pyinstaller>=6.0.0",
+]
+
+[project.scripts]
+discord-monitor = "main:main"
