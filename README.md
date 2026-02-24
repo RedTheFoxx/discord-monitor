@@ -47,8 +47,6 @@ L'exécutable sera dans `dist\discord-monitor.exe`. Le build `-NoConsole` évite
 
 ### Si Vencord n’est pas encore installé
 
-Le script ne peut pas faire la première installation de Vencord. Vos amis doivent :
-
 1. Aller sur [vencord.dev](https://vencord.dev)
 2. Télécharger et lancer l’installateur Vencord
 3. Choisir Discord et installer
