@@ -81,10 +81,14 @@ def repair_vencord(silent: bool = False) -> bool:
     if not silent:
         console.print("[dim]Exécution de la réparation Vencord...[/dim]")
     try:
+        creation_flags = 0
+        if os.name == "nt" and silent:
+            creation_flags = subprocess.CREATE_NO_WINDOW
         result = subprocess.run(
             [str(installer_path), "--repair", "--branch", "auto"],
             timeout=120,
             capture_output=silent,
+            creationflags=creation_flags,
         )
         if result.returncode == 0:
             if not silent:
@@ -397,7 +401,7 @@ def main(monitor, launch, repair, startup, silent, install_startup, uninstall_st
 
     if startup:
         _run_startup_mode(silent=silent)
-        return
+        os._exit(0)
 
     vencord_status = get_vencord_status()
 
